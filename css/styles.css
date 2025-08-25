@@ -161,19 +161,6 @@ body {
     padding: 0 20px;
 }
 
-.hero-logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    filter: drop-shadow(0 0 30px rgba(255, 107, 157, 0.5));
-    animation: logoFloat 6s ease-in-out infinite;
-}
-
-@keyframes logoFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
 
 .hero-title {
     font-family: 'Playfair Display', serif;
