@@ -1,0 +1,246 @@
+/* Estilos exclusivos para la página de Entradas de Club Pandora */
+
+/* Base */
+.entradas-page {
+  background: radial-gradient(1200px 600px at 10% 0%, rgba(212,175,55,.08), transparent 40%),
+              radial-gradient(1000px 500px at 90% 20%, rgba(255,107,157,.06), transparent 45%),
+              linear-gradient(135deg, #000 0%, #0b0b0b 35%, #121212 100%);
+}
+
+/* Hero */
+.entradas-hero {
+  position: relative;
+  padding: 160px 0 100px;
+  overflow: hidden;
+}
+
+.hero-overlay-entradas {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(600px 300px at 20% 20%, rgba(212,175,55,.15), transparent 60%),
+    radial-gradient(600px 300px at 80% 60%, rgba(255,107,157,.12), transparent 60%);
+  filter: blur(0.2px);
+  animation: glowSlow 10s ease-in-out infinite;
+}
+
+@keyframes glowSlow {
+  0%, 100% { opacity: .85; }
+  50% { opacity: 1; }
+}
+
+.entradas-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.entradas-hero-title {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.entradas-hero-title .title-main {
+  display: block;
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  background: linear-gradient(135deg, #fff 0%, #ffd700 40%, #d4af37 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(212,175,55,.35);
+}
+
+.entradas-hero-title .title-sub {
+  display: block;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  letter-spacing: .25em;
+  margin-top: 6px;
+  background: linear-gradient(135deg, #ffffff 0%, #ff6b9d 30%, #ffd700 70%, #d4af37 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.entradas-hero-subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: #e8e5e1;
+  opacity: .9;
+  margin-top: 12px;
+}
+
+.hero-features {
+  margin-top: 22px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-features .feature {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(212,175,55,.25);
+  border-radius: 999px;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+  font-size: .95rem;
+}
+.hero-features i { color: #d4af37; }
+
+/* Sección Paquetes */
+.paquetes-section { padding: 70px 0 30px; }
+.section-header-entradas { text-align: center; margin-bottom: 28px; }
+.section-title-entradas {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  background: linear-gradient(135deg, #fff 0%, #ffd700 40%, #d4af37 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-subtitle-entradas { color: #d9d6d2; margin-top: 6px; }
+
+.paquetes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.paquete-card {
+  position: relative;
+  border: 1px solid rgba(212,175,55,.22);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0) 60%),
+              rgba(0,0,0,.45);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,.45);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.paquete-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 60px rgba(0,0,0,.6);
+  border-color: rgba(255,215,0,.5);
+}
+
+.paquete-card.premium { border-color: rgba(255,215,0,.5); }
+.paquete-card.vip { border-color: rgba(255,107,157,.45); }
+
+.popular-badge, .vip-badge {
+  position: absolute; top: 12px; right: 12px;
+  padding: 6px 12px; border-radius: 999px;
+  font-size: .75rem; letter-spacing: .06em; font-weight: 700;
+}
+.popular-badge { background: linear-gradient(135deg, #ffd700, #d4af37); color: #000; }
+.vip-badge { background: linear-gradient(135deg, #ff6b9d, #ff3e80); color: #fff; }
+
+.paquete-header { padding: 22px 22px 10px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; }
+.paquete-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: rgba(212,175,55,.15); color: #d4af37; font-size: 1.2rem; }
+.paquete-title { font-size: 1.2rem; font-weight: 700; }
+.paquete-precio { text-align: right; }
+.paquete-precio .precio { font-family: 'Playfair Display', serif; font-size: 1.6rem; background: linear-gradient(135deg, #fff, #ffd700 40%, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.paquete-precio .precio-info { font-size: .8rem; color: #c9c6c2; display: block; margin-top: -2px; }
+
+.paquete-content { padding: 0 22px 18px; }
+.incluye-section h4 { margin: 6px 0 8px; font-weight: 700; color: #f5f3f0; }
+.servicios-lista { list-style: none; display: grid; gap: 8px; }
+.servicios-lista li { display: flex; align-items: center; gap: 10px; color: #eae7e3; }
+.servicios-lista i { color: #d4af37; }
+
+.paquete-info { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+.paquete-info .info-item { display: flex; gap: 8px; align-items: center; color: #d9d6d2; font-size: .95rem; }
+.paquete-info i { color: #ff6b9d; }
+
+.btn-reservar {
+  width: calc(100% - 28px);
+  margin: 12px 14px 18px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 12px 16px; border-radius: 12px; cursor: pointer;
+  border: none;
+  background: linear-gradient(135deg, #d4af37, #ffd700);
+  color: #000; font-weight: 800; letter-spacing: .04em;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn-reservar:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212,175,55,.35); }
+.premium-btn { background: linear-gradient(135deg, #ffd700, #d4af37); }
+.vip-btn { background: linear-gradient(135deg, #ff6b9d, #ff3e80); color: #fff; }
+
+/* Servicios adicionales */
+.servicios-adicionales { padding: 40px 0; }
+.servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.servicio-adicional { border: 1px solid rgba(212,175,55,.2); border-radius: 16px; padding: 18px; background: rgba(0,0,0,.35); backdrop-filter: blur(8px); }
+.servicio-adicional .servicio-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 10px; background: rgba(212,175,55,.15); color: #d4af37; margin-bottom: 10px; }
+.botellas-lista, .transporte-lista, .gastronomia-lista { display: grid; gap: 10px; }
+.botella-item, .transporte-item, .gastro-item { display: flex; justify-content: space-between; color: #e9e6e2; border-bottom: 1px dashed rgba(212,175,55,.2); padding-bottom: 6px; }
+
+/* Proceso de reserva */
+.proceso-reserva { padding: 40px 0; }
+.pasos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.paso { border: 1px solid rgba(212,175,55,.2); border-radius: 16px; padding: 16px; background: rgba(0,0,0,.35); }
+.paso-numero { width: 36px; height: 36px; border-radius: 999px; display: grid; place-items: center; background: linear-gradient(135deg, #ffd700,#d4af37); color: #000; font-weight: 800; margin-bottom: 8px; }
+
+/* Formulario de reserva */
+.formulario-reserva { padding: 30px 0 60px; }
+.reserva-wrapper { display: grid; grid-template-columns: 1.1fr 1fr; gap: 26px; align-items: start; }
+.reserva-info { border: 1px solid rgba(212,175,55,.2); border-radius: 16px; padding: 18px; background: rgba(0,0,0,.35); }
+.reserva-info h2 { font-family: 'Playfair Display', serif; background: linear-gradient(135deg, #fff,#ffd700 40%,#d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.ventajas-reserva { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin: 12px 0; }
+.ventaja { display: flex; gap: 10px; align-items: center; color: #e8e5e1; }
+.ventaja i { color: #d4af37; }
+.contacto-opciones { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+.contacto-btn { display: inline-flex; gap: 8px; align-items: center; padding: 10px 14px; border-radius: 999px; border: 1px solid rgba(212,175,55,.3); color: #f5f3f0; text-decoration: none; }
+.contacto-btn.whatsapp { border-color: rgba(37,211,102,.6); }
+
+.reserva-form-container { border: 1px solid rgba(212,175,55,.2); border-radius: 16px; padding: 18px; background: rgba(0,0,0,.35); }
+.reserva-form h3 { margin-bottom: 12px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-group { display: grid; gap: 6px; margin-bottom: 10px; }
+.form-group label { color: #eae7e3; font-size: .95rem; }
+.reserva-form input, .reserva-form select, .reserva-form textarea { background: rgba(255,255,255,.04); border: 1px solid rgba(212,175,55,.25); border-radius: 10px; padding: 10px 12px; color: #f5f3f0; }
+.reserva-form textarea { resize: vertical; }
+.checkbox-group { display: grid; gap: 6px; }
+.checkbox-item { display: flex; gap: 8px; align-items: center; color: #eae7e3; }
+
+.precio-total { border: 1px dashed rgba(212,175,55,.35); border-radius: 12px; padding: 10px 12px; margin: 8px 0; background: rgba(255,215,0,.06); }
+.total-content { display: flex; justify-content: space-between; align-items: center; }
+.total-label { color: #eae7e3; }
+.total-precio { font-family: 'Playfair Display', serif; font-size: 1.4rem; background: linear-gradient(135deg, #fff,#ffd700 40%,#d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.btn-enviar { width: 100%; display: inline-flex; gap: 10px; align-items: center; justify-content: center; padding: 12px 16px; border-radius: 12px; border: none; cursor: pointer; background: linear-gradient(135deg, #d4af37, #ffd700); color: #000; font-weight: 800; }
+
+/* Políticas */
+.politicas-section { padding: 34px 0; }
+.politicas-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.politica-card { border: 1px solid rgba(212,175,55,.2); border-radius: 16px; padding: 16px; background: rgba(0,0,0,.35); }
+.politica-card h3 { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.politica-card ul { padding-left: 16px; color: #e9e6e2; }
+
+/* FAQ */
+.faq-section { padding: 34px 0; }
+.faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.faq-item { border: 1px solid rgba(212,175,55,.2); border-radius: 14px; overflow: hidden; background: rgba(0,0,0,.35); }
+.faq-question { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 14px; cursor: pointer; }
+.faq-question h4 { margin: 0; }
+.faq-answer { padding: 0 14px 12px; color: #ddd; display: none; }
+
+/* CTA final */
+.cta-final { padding: 40px 0 60px; }
+.cta-content { border: 1px solid rgba(212,175,55,.25); border-radius: 16px; padding: 24px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0) 60%), rgba(0,0,0,.45); text-align: center; }
+.btn-cta { display: inline-flex; gap: 8px; align-items: center; padding: 12px 16px; border-radius: 12px; text-decoration: none; font-weight: 800; }
+.btn-cta.primary { background: linear-gradient(135deg, #d4af37, #ffd700); color: #000; }
+.btn-cta.secondary { border: 1px solid rgba(212,175,55,.35); color: #f5f3f0; }
+.cta-buttons { display: flex; gap: 12px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .paquetes-grid { grid-template-columns: repeat(2, 1fr); }
+  .servicios-grid { grid-template-columns: repeat(2, 1fr); }
+  .pasos-grid { grid-template-columns: repeat(3, 1fr); }
+  .reserva-wrapper { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .paquetes-grid { grid-template-columns: 1fr; }
+  .servicios-grid { grid-template-columns: 1fr; }
+  .pasos-grid { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
