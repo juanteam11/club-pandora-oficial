@@ -716,6 +716,9 @@ section {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 .btn-comprar:hover {
